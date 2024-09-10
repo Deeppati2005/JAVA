@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <script>
+    //checking whether the fields are empty or not on pressing thr submit button
+
+    function validateForm() {
+      var x = document.forms["myForm"]["fname1"].value;
+      var y = document.forms["myForm"]["fname2"].value;
+      var z = document.forms["myForm"]["fname3"].value;
+
+      if (
+        (x == null || x == "") &&
+        (y == null || y == "") &&
+        (z == null || z == "")
+      ) {
+        alert("All fileds are blank");
+        document.forms["myForm"]["fname1"].focus();
+        //to highlight this field
+        return false;
+      }
+      if (x == null || x == "") {
+        alert("First Name Missing");
+        document.forms["myForm"]["fname1"].focus();
+        //to highlight this field
+        return false;
+      }
+      if (y == null || y == "") {
+        alert("Password Must be Filled out");
+        document.forms["myForm"]["fname2"].focus();
+        //to highlight this field
+        return false;
+      }
+      if (z == null || z == "") {
+        alert("Emailid Must be Filled out");
+        document.forms["myForm"]["fname3"].focus();
+        //to highlight this field
+        return false;
+      }
+    }
+  </script>
+  <body>
+    <form
+      name="myForm"
+      action=""
+      onsubmit="return validateForm()"
+      method="post"
+    >
+      First Name : <input type="text" name="fname1" /> Password :
+      <input type="password" name="fname2" /> Email :
+      <input type="text" name="fname3" />
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+</html>
