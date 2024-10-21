@@ -10,6 +10,10 @@ public class prime{
 	{
 	   System.out.println("Prime no");
 	}
+	if(n<=1)
+	{
+		System.out.println("Not a Prime no");
+	}
 	else
 	{
 	  	boolean isPrime = true;

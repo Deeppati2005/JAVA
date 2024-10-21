@@ -10,7 +10,6 @@ public class digit{
 	int n = sc.nextInt();
 	while(n>0)
 	{
-	 a = n%10;
 	 c++;
 	 n=n/10;
 	}
